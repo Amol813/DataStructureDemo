@@ -20,6 +20,12 @@ namespace DataStructureDemo
 
             Console.WriteLine("\nNodes after adding node in reverse order:");
             list.Display();
+
+            // node at a particular position
+            list.InsertAtParticularPosition(2, 25);
+
+            Console.WriteLine("\nNodes after inserting node at position 1:");
+            list.Display();
         }
     }
 }
