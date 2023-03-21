@@ -93,5 +93,24 @@ namespace DataStructureDemo
             }
             this.head = this.head.next;
         }
+
+        internal void RemovelastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            if (head.next == null)
+            {
+                this.head = null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+
+        }
     }
 }
