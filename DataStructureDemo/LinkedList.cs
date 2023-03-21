@@ -60,7 +60,7 @@ namespace DataStructureDemo
                 temp = temp.next;
             }
         }
-        internal void InsertAtParticularPosition(int position, int data) //1,30
+        internal void InsertAtParticularPosition(int position, int data) //2,25
         {
             Node newestNode = new Node(data);
             if (this.head == null)
@@ -125,6 +125,24 @@ namespace DataStructureDemo
                 node = node.next;
                 count++;
             }
+        }
+        internal void DeleteNodeAtParticularPosition(int position) //2
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            if (head.next == null)
+            {
+                this.head = null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+
         }
     }
 }
