@@ -28,6 +28,24 @@ namespace DataStructureDemo
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+        /// <summary>
+        /// UC-2
+        /// </summary>
+        /// <param name="data"></param
+        internal void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head; //70
+                head = newNode; //30
+                head.next = temp; //30---->70
+            }
+        }
         internal void Display()
         {
             Node temp = this.head;
@@ -38,9 +56,8 @@ namespace DataStructureDemo
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.WriteLine(temp.data);
                 temp = temp.next;
-
             }
         }
     }
